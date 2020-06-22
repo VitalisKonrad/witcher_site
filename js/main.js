@@ -40,7 +40,6 @@
 
 var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
-    // direction: 'horizontal',
     // speed: 400,
     // spaceBetween: 100
 });
