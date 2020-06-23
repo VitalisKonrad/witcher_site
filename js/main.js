@@ -39,12 +39,27 @@
 // });
 
 var mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     loop: true,
     navigation: {
         nextEl: ".arrow",
     },
-
+    breakpoints: {
+        540: {
+            slidesPerView: 2,
+        }
+    }
     // speed: 400,
     // spaceBetween: 100
 });
+
+var menuButton = document.querySelector(".menu-button");
+var menu = document.querySelector(".header");
+
+menuButton.addEventListener('click', function () {
+    menuButton.classList.toggle('menu-button-active');
+    console.log("кнопка нажата");
+    menu.classList.toggle('header-active');
+});
+var player = new Playerjs({id:"player", file:"../film/TheWitcherS01/The.Witcher.S01.E01.avi"});
+
